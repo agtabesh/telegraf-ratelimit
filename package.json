@@ -1,11 +1,11 @@
 {
-  "name": "telegraf-ratelimit",
-  "version": "2.0.0",
-  "description": "Rate-limiting middleware for Telegraf",
+  "name": "telegraf-userbased-ratelimit",
+  "version": "1.0.0",
+  "description": "Rate-limiting middleware for Telegraf based on number of users",
   "main": "lib/rate-limit.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/telegraf/telegraf-ratelimit.git"
+    "url": "git+ssh://git@github.com/agtabesh/telegraf-ratelimit.git"
   },
   "keywords": [
     "telegram",
@@ -13,12 +13,12 @@
     "rate limit",
     "middleware"
   ],
-  "author": "Vitaly Domnikov <dotcypress@gmail.com>",
+  "author": "Ahmad Ganjtabesh <ifireir@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/telegraf/telegraf-ratelimit/issues"
+    "url": "https://github.com/agtabesh/telegraf-ratelimit/issues"
   },
-  "homepage": "https://github.com/telegraf/telegraf-ratelimit#readme",
+  "homepage": "https://github.com/agtabesh/telegraf-ratelimit#readme",
   "engines": {
     "node": ">=6.2.1"
   },
@@ -30,7 +30,8 @@
     "test": "eslint ."
   },
   "dependencies": {
-    "debug": "^3.1.0"
+    "debug": "^3.1.0",
+    "telegraf": "^3.17.5"
   },
   "devDependencies": {
     "eslint": "^4.1.1",

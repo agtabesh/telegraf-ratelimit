@@ -6,17 +6,19 @@
 
 Rate-limiting middleware for [Telegraf (Telegram bot framework)](https://github.com/telegraf/telegraf).
 
+This repository is forked from [telegraf/telegraf-ratelimit](https://github.com/telegraf/telegraf-ratelimit) in order to add limitation based on number of users who are using bot.
+
 ## Installation
 
 ```js
-$ npm install telegraf-ratelimit
+$ npm install telegraf-userbased-ratelimit
 ```
 
 ## Example
   
 ```js
 const Telegraf = require('telegraf')
-const rateLimit = require('telegraf-ratelimit')
+const rateLimit = require('telegraf-userbased-ratelimit')
 
 // Set limit to 1 message per 3 seconds
 const limitConfig = {

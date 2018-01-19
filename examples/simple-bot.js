@@ -1,10 +1,13 @@
 const Telegraf = require('telegraf')
-const rateLimit = require('../lib/rate-limit')
+const rateLimit = require('../lib/user-based-rate-limit')
 
-// Set limit to 1 message per 3 seconds per chat per user
+// Set limit to 1 message per 30 seconds per chat per user
 const config = {
-  window: 3000,
+  window: 300 * 1000,
   limit: 1,
+  keyGenerator: function (ctx) {
+    return ctx.from.id
+  },
   onLimitExceeded: (ctx, next) => ctx.reply('Rate limit exceeded')
 }
 
